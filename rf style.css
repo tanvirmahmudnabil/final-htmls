@@ -1,0 +1,22 @@
+fieldset{
+	width: 500px;
+	height: 800px;
+	margin:0 auto;
+	background-color:#E7E7E7;
+	border: 2px solid black;
+}
+legend{
+	margin:0 auto;
+	border: 2px solid black;
+	background-color: white;
+}
+body{
+	background-image: url(https://image.freepik.com/free-vector/illustration-university-graduates_53876-28468.jpg);
+background-repeat: no-repeat;
+background-position: center center;
+background-size: cover;
+background-attachment: fixed;
+}
+form{
+	font-size: 30px;
+}
