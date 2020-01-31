@@ -1,0 +1,98 @@
+<?php
+session_start();
+
+$servername 	= "localhost";
+$username 		= "root";
+$password 		= null;
+$dbName 		= "regformcc";
+
+// Create connection
+$conn = mysqli_connect($servername, $username, $password, $dbName);
+
+// Check connection
+if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error());
+}
+
+?>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Career Consultancy</title>
+	<link rel="stylesheet" href="rf style.css">
+</head>
+<body>
+
+
+
+
+
+
+	<fieldset><legend><h1>Registration Form</h1></legend>
+	<br><br>
+	<form action="registration.php" method="post">
+
+
+		<label>Type:</label>
+		<select name="type"> 
+         <option value="Student" selected>Student</option>
+         <option value="Alumni">Alumni</option></select>
+         <br><br>
+
+		<label>Username:</label>
+		<input type="text" name="username" placeholder="Enter your username"><br><br>
+
+		<label>Password:</label>
+		<input type="password" name="password"><br><br>
+		
+		
+		<label>Email:</label>
+		<input type="email" name="email"><br><br>
+		
+		<label>University:</label>
+		<select name="university"> 
+         <option value="buet" selected>BUET</option>
+         <option value="kuet">KUET</option>
+         <option value="ruet">RUET</option>
+         <option value="cuet">CUET</option>
+         <option value="sust">SUST</option>
+         <option value="iut">IUT</option>
+         <option value="du">DU</option>
+         <option value="ku">KU</option>
+         <option value="ru">RU</option>
+         <option value="cu">CU</option>
+        </select> 
+        <br><br>
+<label>Depratment:</label>
+<br><br>
+<select name="department">
+	<option value="math">MATHEMATICS</option>
+	<option value="stat">STATISTICS</option>
+	<option value="chem">CHEMISTRY</option>
+	<option value="phy">PHYSICS</option>
+	<option value="cse" selected>CSE</option>
+	<option value="eee">EEE</option>
+	<option value="me">ME</option>
+	<option value="ce">CE</option>
+	<option value="ipe">IPE</option>
+	<option value="mme">MME</option>	
+</select>
+<br><br>
+	<label>Batch(HSC):</label>
+	<input type="number" name="hscbatch">
+	<br><br>
+	<input type="submit" value="Submit">
+	<input type="reset">
+
+
+
+
+
+
+		</fieldset>
+	</form>
+
+</body>
+</html>
